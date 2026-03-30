@@ -20,7 +20,11 @@ class Program
         HashSet<Produit> panier = new HashSet<Produit>();
         panier.Add(p2);
         panier.Add(p3);
-
         Console.WriteLine(panier.Count);
+
+        //EXERCICE 4
+        Console.WriteLine("\n____________________EXO 4____________________");
+        Produit article = new ProduitPerissable("B05", "Lait", 15.0, 5);
+        Console.WriteLine( article.GetType());
     }
 }
