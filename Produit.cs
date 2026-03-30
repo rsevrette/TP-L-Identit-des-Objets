@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 class Produit {
     private string codeArticle;
     private string designation;
@@ -23,6 +25,10 @@ class Produit {
             return this.codeArticle == autre.codeArticle;
         }
         else return false;
+    }
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(codeArticle);
     }
 
 }

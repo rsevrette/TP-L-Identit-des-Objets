@@ -14,5 +14,13 @@ class Program
         Produit p2 = new Produit("A01", "souris", 15.0);
         Produit p3 = new Produit("A01", "souris", 15.0);
         Console.WriteLine(p2.Equals(p3));
+
+        //EXERCICE 3
+        Console.WriteLine("\n____________________EXO 3____________________");
+        HashSet<Produit> panier = new HashSet<Produit>();
+        panier.Add(p2);
+        panier.Add(p3);
+
+        Console.WriteLine(panier.Count);
     }
 }
