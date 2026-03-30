@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        //EXERCICE 1
+        Console.WriteLine("\n____________________EXO 1____________________");
+        Produit p1 = new Produit("0123", "azerty", 15);
+        Console.WriteLine(p1.ToString());
+
     }
 }
