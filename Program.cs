@@ -1,4 +1,6 @@
-﻿namespace TP1_14_classe_object;
+﻿using System.Runtime.Serialization.Formatters;
+
+namespace TP1_14_classe_object;
 
 class Program
 {
@@ -26,5 +28,25 @@ class Program
         Console.WriteLine("\n____________________EXO 4____________________");
         Produit article = new ProduitPerissable("B05", "Lait", 15.0, 5);
         Console.WriteLine( article.GetType());
+
+        //EXERCICE 5
+        Console.WriteLine("\n____________________EXO 5____________________");
+        List<object> inventaire = new List<object>();
+        Produit p4 = new Produit("A01", "Souris", 15.0);
+
+        inventaire.Add(5);                
+        inventaire.Add("Dépôt central");  
+        inventaire.Add(p4);              
+
+        foreach (object item in inventaire)
+        {
+            Console.WriteLine("Type : " + item.GetType());
+            Console.WriteLine("ToString : " + item.ToString());
+            if (item is Produit p)
+            {
+                Console.WriteLine("Code article : " + p.GetCodeArticle());
+            }
+            Console.WriteLine("-------------------");
+        }
     }
 }
